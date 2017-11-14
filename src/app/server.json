@@ -1,0 +1,8 @@
+{
+    "users": [
+        {"id": 1, "name": "The Godfather", "gender": "Men"},
+        {"id": 2, "name": "Casablanca", "gender": "Men"},
+        {"id": 4, "name": "Csssssanca", "gender": "Women"}
+    ]
+
+}

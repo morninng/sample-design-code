@@ -1,0 +1,7 @@
+
+<span *ngIf="user$ | async as user else loadingUser">
+{{user.honorific_name}}
+</span>
+<ng-template #loadingUser>
+  loading
+</ng-template>

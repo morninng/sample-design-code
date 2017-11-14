@@ -1,0 +1,10 @@
+<p>
+  chat works!
+</p>
+
+<ul>
+  <li *ngFor="let chat of (chat$ | async)">
+    {{chat.content}} <button (click)="delete(chat.id)">delete</button>
+  </li>
+</ul>
+<button (click)="add()"> add </button>
