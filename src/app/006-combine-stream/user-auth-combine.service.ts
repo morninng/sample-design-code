@@ -11,7 +11,7 @@ import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 
 
 @Injectable()
-export class UserAuthService {
+export class UserAuthCombineService {
 
   own_user_subject: Subject<User | null>;
   own_user$: Observable<User>;
@@ -22,7 +22,7 @@ export class UserAuthService {
 
     setTimeout(() => {
       this.own_user_subject.next({id: '111', name: 'yuta'});
-    }, 2000);
+    }, 4000);
 
    }
 

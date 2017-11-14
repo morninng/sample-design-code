@@ -23,6 +23,11 @@ import {UserAuthService} from './005-state-comparison/user-auth.service';
 
 import {EffectService} from './005-state-comparison/effect.service';
 
+
+import {ChatRoomCombineComponent} from './006-combine-stream/chat-room/chat-room-combine.component';
+import {UserAuthCombineService} from './006-combine-stream/user-auth-combine.service';
+import {RoomStatusCombineService} from './006-combine-stream/room-status-combine.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +36,8 @@ import {EffectService} from './005-state-comparison/effect.service';
     UserShowComponent,
     TestPlateComponent,
     ChatRoomComponent,
-    ChatComponent
+    ChatComponent,
+    ChatRoomCombineComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,10 @@ import {EffectService} from './005-state-comparison/effect.service';
     RoomStatusService,
     UserAuthService,
     EffectService,
-    ChatService],
+    ChatService,
+    RoomStatusCombineService,
+    UserAuthCombineService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

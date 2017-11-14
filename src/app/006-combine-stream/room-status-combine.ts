@@ -11,7 +11,7 @@ export interface RoomStatusVm  {
     is_own_room?: boolean;
 }
 
-import { User } from './user-auth.service';
+import { User } from './user-auth-combine.service';
 
 
 export function own_room_status_check(in_room_status: RoomStatusDb, own_user: User ): RoomStatusVm {
