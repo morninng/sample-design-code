@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {RoleType, RoleFullName, get_full_rolename} from './role';
 import {AaaVM, AaaDb, convert_Aaa_DB_Vm} from './aaa';
+import {BbbVM, BbbDb, BbbAdapter } from './bbb';
+
 
 
 @Component({
@@ -15,19 +17,23 @@ export class DataConvertComponent implements OnInit {
     time: 1485795600000,
     role: [RoleType.PM, RoleType.MG]
   };
+  bbb_vm: BbbVM;
+  bbb_db: BbbDb = {
+    time: 1485795600000,
+    role: [RoleType.PM, RoleType.MG]
+  };
+
 
   constructor() {}
 
   ngOnInit() {
 
     console.log( get_full_rolename(RoleType.PM) );
-
-    const aaa_data: AaaDb = {
-      time: 1485795600000,
-      role: [RoleType.PM, RoleType.MG]
-    };
-
     this.aaa_vm = convert_Aaa_DB_Vm(this.aaa_db);
+
+    const bbb_obj = new BbbAdapter();
+    this.bbb_vm = bbb_obj.adapt(this.bbb_db);
+
   }
 
 }

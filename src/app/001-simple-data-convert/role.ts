@@ -5,7 +5,7 @@ export enum RoleType {
 }
 
 type RoleFullNameType = {
-    [key in RoleType]: string;
+    [key in RoleType]: string; //   ここも型にできる？？
 };
 
 
