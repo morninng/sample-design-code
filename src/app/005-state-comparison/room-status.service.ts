@@ -46,8 +46,7 @@ export class RoomStatusService {
 
 
   // assume it is sent from the server
-  set_room_user() {
-    const room_status: RoomStatusDb = { name: 'aa', users: ['111', '222', '333']   };
+  set_room_user(room_status: RoomStatusDb) {
     this.room_status_db_subject.next(room_status);
   }
 

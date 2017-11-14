@@ -13,12 +13,16 @@ type ChatVm = ChatDb;
 @Injectable()
 export class ChatService {
 
-  private chat_subject: BehaviorSubject<Chat[]>;
+  private chat_subject: BehaviorSubject<ChatDb[]>;
   public chat$: Observable<ChatVm[]>;
 
   constructor() {
     this.chat_subject = new BehaviorSubject([]);
     this.chat$ = this.chat_subject.asObservable();
+   }
+
+   get_chat$() {
+     return this.chat$;
    }
 
    add(in_data: ChatDb) {

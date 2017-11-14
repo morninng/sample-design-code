@@ -22,6 +22,9 @@ describe('UserStoreService', () => {
     });
   }));
 
+
+  // spy test
+
   it('get user from http and  check the data existence', inject([UserStoreService, HttpClient, HttpTestingController],
                         (service: UserStoreService, http: HttpClient, httpMock: HttpTestingController) => {
 

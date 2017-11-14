@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ChatService, Chat } from './../chat.service';
+import { ChatService, ChatDb } from './../chat.service';
 import {Observable} from 'rxjs/Observable';
 
 
@@ -11,16 +11,16 @@ import {Observable} from 'rxjs/Observable';
 })
 export class ChatComponent implements OnInit {
 
-  chat$: Observable<Chat[]>;
+  chat$: Observable<ChatDb[]>;
 
   constructor( private chatService: ChatService) { }
 
   ngOnInit() {
-    this.chat$ = this.chatService.chat$;
+    this.chat$ = this.chatService.get_chat$();
   }
 
   add() {
-    const chat: Chat = {
+    const chat: ChatDb = {
       id: Date.now(),
       content: 'aaa'
     };

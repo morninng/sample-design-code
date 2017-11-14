@@ -11,7 +11,7 @@ export class EffectService {
   }
 
   logout() {
-    console.log('side effect, login');
+    console.log('side effect, logout');
   }
 
 }

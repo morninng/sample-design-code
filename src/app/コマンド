@@ -1,0 +1,6 @@
+https://www.webprofessional.jp/mock-rest-apis-using-json-server/
+
+
+json-server --watch server.json
+
+

@@ -33,6 +33,7 @@ export class UserStoreService {
   get_user(user_id: string): Observable<User> {
 
     if (this.user_data[user_id]) {
+      console.log('respond from store', user_id);
       return Observable.of( this.user_data[user_id] );
     }
 

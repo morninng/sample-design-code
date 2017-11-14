@@ -1,6 +1,6 @@
 
 <span *ngIf="user$ | async as user else loadingUser">
-{{user.honorific_name}}
+{{user | json}}
 </span>
 <ng-template #loadingUser>
   loading

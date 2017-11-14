@@ -6,7 +6,7 @@ import { RoomStatusDb, RoomStatusVm, own_room_status_check } from './room-status
 import {Subject} from 'rxjs/Subject';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {Observable} from 'rxjs/Observable';
-import {EffectService} from './effect.service';
+// import {EffectService} from './effect.service';
 
 import 'rxjs/add/operator/combineLatest';
 import 'rxjs/add/operator/scan';
@@ -18,9 +18,9 @@ export class RoomStatusService {
 
   private room_status_db_subject: Subject<RoomStatusDb>;
   room_status_vm$: Observable<RoomStatusVm>;
-  effect$: Observable<RoomStatusVm>;
+  // effect$: Observable<RoomStatusVm>;
 
-  constructor(private userAuthService: UserAuthService, private effect: EffectService) {
+  constructor(private userAuthService: UserAuthService) {
 
     this.room_status_db_subject = new BehaviorSubject({name: '' , users: []});
 

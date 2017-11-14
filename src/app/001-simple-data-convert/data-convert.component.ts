@@ -10,7 +10,11 @@ import {AaaVM, AaaDb, convert_Aaa_DB_Vm} from './aaa';
 })
 export class DataConvertComponent implements OnInit {
 
-  aaa: AaaVM;
+  aaa_vm: AaaVM;
+  aaa_db: AaaDb = {
+    time: 1485795600000,
+    role: [RoleType.PM, RoleType.MG]
+  };
 
   constructor() {}
 
@@ -23,7 +27,7 @@ export class DataConvertComponent implements OnInit {
       role: [RoleType.PM, RoleType.MG]
     };
 
-    this.aaa = convert_Aaa_DB_Vm(aaa_data);
+    this.aaa_vm = convert_Aaa_DB_Vm(this.aaa_db);
   }
 
 }
