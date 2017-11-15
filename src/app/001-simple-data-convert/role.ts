@@ -4,6 +4,8 @@ export enum RoleType {
     MG = 'MG'
 }
 
+export const RoleArray = ['PM', 'MG'];
+
 type RoleFullNameType = {
     [key in RoleType]: string; //   ここも型にできる？？
 };

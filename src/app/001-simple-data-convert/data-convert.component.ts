@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {RoleType, RoleFullName, get_full_rolename} from './role';
+import {RoleType, RoleFullName, get_full_rolename, RoleArray} from './role';
 import {AaaVM, AaaDb, convert_Aaa_DB_Vm} from './aaa';
-import {BbbVM, BbbDb, BbbAdapter } from './bbb';
+import {BbbVm, BbbDb, BbbAdapter } from './bbb';
 
 
 
@@ -17,7 +17,7 @@ export class DataConvertComponent implements OnInit {
     time: 1485795600000,
     role: [RoleType.PM, RoleType.MG]
   };
-  bbb_vm: BbbVM;
+  bbb_vm: BbbVm;
   bbb_db: BbbDb = {
     time: 1485795600000,
     role: [RoleType.PM, RoleType.MG]
